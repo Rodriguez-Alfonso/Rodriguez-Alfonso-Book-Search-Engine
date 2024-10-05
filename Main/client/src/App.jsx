@@ -1,12 +1,8 @@
 import './App.css';
 import { Outlet } from 'react-router-dom';
-import {
-  ApolloClient,
-  InMemoryCache,
-  ApolloProvider,
-  createHttpLink,
-} from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+import { Container } from 'react-bootstrap';
 
 import Navbar from './components/Navbar';
 
@@ -38,7 +34,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Navbar />
-      <Outlet />
+      <Container className="py-4">
+        <Outlet />
+      </Container>
     </ApolloProvider>
   );
 }
