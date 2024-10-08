@@ -23,7 +23,7 @@ const SearchBooks = () => {
  
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
-  const [saveBook, { error }] = useMutation(SAVE_BOOK);
+  const [saveBook] = useMutation(SAVE_BOOK);
 
 
   useEffect(() => {

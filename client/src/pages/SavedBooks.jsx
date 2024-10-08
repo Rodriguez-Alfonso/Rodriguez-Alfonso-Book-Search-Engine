@@ -15,7 +15,7 @@ import {
   
   const SavedBooks = () => {
     const { loading, data } = useQuery(QUERY_ME);
-    const [removeBook, { error }] = useMutation(REMOVE_BOOK);
+    const [removeBook] = useMutation(REMOVE_BOOK);
   
     const userData = data?.me || {};
   
@@ -94,4 +94,3 @@ import {
   };
   
   export default SavedBooks;
-  
